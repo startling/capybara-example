@@ -1,12 +1,11 @@
 $(function () {
-  console.log("here");
   $("body")
-    .append("<div class='time-button'>Get the current time.</div>")
+    .append("<div class='text-button'>Generate some random text.</div>")
     .click(function () {
-      $.ajax({url: "/timestamp"})
+      $.ajax({url: "/text"})
         .done(function (data) {
-          $(".time-button").addClass("done");
-          $(".time-button").text("The time is " + data + "!");
+          $(".text-button").addClass("done");
+          $(".text-button").text(data);
         });
     });
 });

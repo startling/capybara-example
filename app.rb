@@ -4,6 +4,6 @@ get '/' do
   redirect '/index.html'
 end
 
-get '/timestamp' do
-  Time.now.utc.iso8601
+get '/text' do
+  (0...200000).map { ('a'..'z').to_a[rand(26)] }.join
 end

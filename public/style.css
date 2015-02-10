@@ -2,9 +2,9 @@ body {
   font: normal 12pt Georgia;
 }
 
-
-div.time-button {
+div.text-button {
   width: 20em;
+  word-wrap: break-word;
   margin: 1em;
   border: 1px solid rgba(0,0,0, 0.65);
   background-color: #3399ff;
