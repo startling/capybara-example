@@ -4,8 +4,10 @@ $(function () {
     .click(function () {
       $.ajax({url: "/text"})
         .done(function (data) {
+          data.match(/.{1,10}/g).forEach(function (chunk) {
+            $(".text-button").append($("<p></p>").text(chunk));
+          });
           $(".text-button").addClass("done");
-          $(".text-button").text(data);
         });
     });
 });
