@@ -6,7 +6,7 @@ require 'capybara/dsl'
     scenario "clicking the button gets a timestamp" do
       visit '/'
       find('div.text-button').click
-      expect(find('div.text-button').text.length).to be > 10000
+      expect(find('div.text-button').text).to match /This is line number 4999/
     end
   end
 end
