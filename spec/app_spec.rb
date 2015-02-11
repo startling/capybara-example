@@ -6,8 +6,7 @@ require 'capybara/dsl'
     scenario "clicking the button gets a timestamp" do
       visit '/'
       find('div.text-button').click
-      expect(find('div.text-button').text.length).to be > 30
-      expect(page).to have_selector('div.text-button.done')
+      expect(find('div.text-button').text.length).to be > 100
     end
   end
 end
