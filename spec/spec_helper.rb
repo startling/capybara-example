@@ -8,6 +8,7 @@ Sinatra::Application.root = File.dirname(__FILE__) + "/.."
 Capybara.app = Sinatra::Application
 Capybara.default_driver = :selenium
 Capybara.default_selector = :css
+Capybara.default_wait_time = 1
 # load the actual app.
 require Sinatra::Application.root + "/app"
 
